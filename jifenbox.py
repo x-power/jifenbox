@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding=utf-8
 #
 # Copyright 2009 Facebook
 #
@@ -13,6 +14,7 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
+
 
 import markdown
 import os.path
@@ -46,7 +48,7 @@ class Application(tornado.web.Application):
             (r"/auth/logout", AuthLogoutHandler),
         ]
         settings = dict(
-            blog_title=u"Tornado Blog",
+            blog_title=u"积分盒子",
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static"),
             ui_modules={"Entry": EntryModule},
